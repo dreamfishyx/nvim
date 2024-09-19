@@ -1,7 +1,7 @@
 vim.o.showmode = false
 
 vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -13,7 +13,6 @@ vim.wo.cursorline = true
 
 vim.wo.signcolumn = "yes"
 
-
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
 vim.o.softtabstop = 4
@@ -21,7 +20,6 @@ vim.o.shiftround = true
 
 vim.o.shiftwidth = 2
 vim.bo.shiftwidth = 2
-
 
 vim.o.autoindent = true
 vim.bo.autoindent = true
@@ -40,7 +38,6 @@ vim.o.hlsearch = false
 
 vim.o.incsearch = true
 
-
 vim.o.cmdheight = 2
 
 vim.o.autoread = true
@@ -49,7 +46,7 @@ vim.bo.autoread = true
 vim.o.wrap = false
 vim.wo.wrap = false
 
-vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+vim.o.whichwrap = "b,s,<,>,[,],h,l"
 
 vim.o.hidden = true
 
@@ -79,7 +76,8 @@ vim.o.wildmenu = true
 
 vim.o.pumheight = 10
 
-vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = vim.o.shortmess .. "c"
 
 vim.o.showtabline = 2
 
+vim.cmd("highlight Cursor gui=NONE guifg=bg guibg=#ffb6c1")
