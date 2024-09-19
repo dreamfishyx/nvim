@@ -44,4 +44,16 @@ map("n", "<leader>tg", ":TermExec cmd='lazygit' direction=float<CR>", { desc = "
 
 -- 开启shell
 -- map("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "open term" })
-map("n", "<leader>tt", '<cmd>TermExec cmd="clear"<cr>', { desc = "open term" })
+-- map("n", "<leader>tt", '<cmd>TermExec cmd="clear"<cr>', { desc = "open term" })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>tt",
+	"<cmd>lua open_terminal()<cr>",
+	{ desc = "open term", noremap = true, silent = true }
+)
+function open_terminal()
+	-- 执行TermExec命令
+	vim.cmd('TermExec cmd="clear"')
+	-- 确保缓冲区是可修改的
+	vim.bo.modifiable = true
+end

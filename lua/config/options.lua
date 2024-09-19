@@ -80,4 +80,16 @@ vim.o.shortmess = vim.o.shortmess .. "c"
 
 vim.o.showtabline = 2
 
-vim.cmd("highlight Cursor gui=NONE guifg=bg guibg=#ffb6c1")
+vim.opt.guicursor = {
+	"n:hor20-Cursor/lCursor",
+	"i-ci-ve:ver25-Cursor/lCursor",
+	"r-cr-o:ver25-Cursor/lCursor",
+}
+vim.cmd([[
+  highlight Cursor guifg=#FFFFFF guibg=#00BFFF
+  highlight lCursor guifg=#FFFFFF guibg=#00BFFF
+  highlight CursorLine guibg=#2e2e2e
+  highlight CursorLineNr guifg=#FFD700
+]])
+
+vim.opt.cursorline = true
