@@ -93,3 +93,5 @@ vim.cmd([[
 ]])
 
 vim.opt.cursorline = true
+
+vim.cmd([[set clipboard+=unnamedplus]])
