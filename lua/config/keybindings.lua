@@ -1,6 +1,6 @@
 -- 设置leader键为空格
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- vim.g.mapleader = " "
+-- vim.g.maplocalleader = " "
 -- 保存本地变量
 local map = vim.api.nvim_set_keymap
 -- 复用参数
@@ -45,15 +45,17 @@ map("n", "<leader>tg", ":TermExec cmd='lazygit' direction=float<CR>", { desc = "
 -- 开启shell
 -- map("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "open term" })
 -- map("n", "<leader>tt", '<cmd>TermExec cmd="clear"<cr>', { desc = "open term" })
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>tt",
-	"<cmd>lua open_terminal()<cr>",
-	{ desc = "open term", noremap = true, silent = true }
-)
-function open_terminal()
+map("n", "<leader>tt", "<cmd>lua Open_terminal()<cr>", { desc = "open term", noremap = true, silent = true })
+function Open_terminal()
 	-- 执行TermExec命令
 	vim.cmd('TermExec cmd="clear"')
 	-- 确保缓冲区是可修改的
 	vim.bo.modifiable = true
 end
+
+map(
+	"n",
+	"<leader>/",
+	"<cmd> lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+	{ desc = "live Frep(Args)" }
+)
