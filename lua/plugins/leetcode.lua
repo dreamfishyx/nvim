@@ -12,12 +12,11 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
-		lang = "python3",
-		cn = {
+		lang = "python3", -- 默认编程语言
+		cn = { -- leetcode.cn
 			enabled = true,
 			translator = true,
-			translate_problems = true,
 		},
-		image_support = true,
+		image_support = true, -- 显示图片
 	},
 }

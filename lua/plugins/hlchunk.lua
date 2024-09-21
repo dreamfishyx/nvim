@@ -7,7 +7,7 @@ return {
 				enable = true,
 			},
 			indent = {
-				enable = true,
+				enable = false,
 				chars = { "┊" },
 			},
 			line_num = {

@@ -28,7 +28,6 @@ require("lazy").setup({
 		-- import your plugins
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 		-- import/override with your plugins
-		{ "tree-sitter-grammars/tree-sitter-markdown" },
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
