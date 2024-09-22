@@ -20,7 +20,7 @@
 
 ##### 说明
 
-1. 上述完美适配kitty背景的效果可能来自主题的透明设置，也可能来自hyprland配置作者的一些设置(hyprland桌面使用脚本安装的)，之前其实不太适配，但是删除一次lazyvim的缓存之后就变成这样(` rm -rf ~/.local/share/nvim/lazy/* `)，目前没弄明白。
+1. 上述完美适配kitty背景的效果可能来自主题的透明设置，也可能来自hyprland配置作者的一些设置(hyprland桌面使用脚本安装的)，之前其实不太适配，但是删除一次lazy的缓存之后就变成这样(` rm -rf ~/.local/share/nvim/lazy/* `)，目前没弄明白。
 
 2. 若是自动选择虚拟环境后，anaconda的curl和系统的curl存在冲突：在`~/.zshrc`指定证书位置(位置或许不同，可以使用`sudo find / -name "ca-certificates.crt" `)：
 
@@ -36,7 +36,7 @@
 
 6. `sudo pacman -Syu imagemagick`,然后`paru -S luarocks` 和 `sudo luarocks --lua-version=5.1 install magick`,这里是`image.nvim`所需，用于在leetcode中显示图片。
 
-7. 此外`lazyvim`一些自带的插件按需启用：
+7. 此外`lazy.nvim`一些自带的插件按需启用：
 
    ```tex
    Enabled Plugins:
@@ -62,8 +62,32 @@
 
 
 
-##### lazyvim快捷键
+##### 快捷键
 
 1. 在文件树中`H`显示隐藏文件。
+
 2. 对于Copilot提示，不选择可以使用`Esc`退出插入模式，放弃当前的建议。或者`Ctrl + e`关闭当前的建议列表。
+
 3. `Ctrl + o`：返回到之前的光标位置
+
+4. LSP快捷键：使用`:map`查看快捷键，实际上不小心发现` ~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/config/keymaps.lua`
+
+   | 快捷键 | 作用                   |
+   | ------ | ---------------------- |
+   | gd     | 跳到变量的定义         |
+   | gr     | 跳到引用               |
+   | gI     | 跳转实现               |
+   | gy     | 跳转类型定义           |
+   | K      | 悬浮显示当前变量的信息 |
+
+   ```lua
+   map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+   map("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+   map("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
+   map("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+   map("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
+   map("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+   map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
+   ```
+
+   
