@@ -28,7 +28,7 @@
    export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
    ```
 
-3. 安装`sudo pacman -S rg`，插件`telescope-live-grep-args.nvim`所需用于文件内容查找。
+3. 安装`sudo pacman -S ripgrep`，插件`telescope-live-grep-args.nvim`所需用于文件内容查找。
 
 4. `:TSInstall http`用于`rest.nvim`插件编写`.http`
 
