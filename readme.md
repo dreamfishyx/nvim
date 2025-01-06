@@ -34,7 +34,7 @@
 
 5. 安装`sudo pacman -S fd`，插件`venv-selector.nvim`所需。
 
-6. `sudo pacman -Syu imagemagick`,(先要安装lua5.1 `sudo pacman -S lua51`) 然后`paru -S luarocks` 和 `sudo luarocks --lua-version=5.1 install magick`,这里是`image.nvim`所需，用于在leetcode中显示图片。
+6. `sudo pacman -S imagemagick`,(先要安装lua5.1 `sudo pacman -S lua51`) 然后`yay -S luarocks` 和 `sudo luarocks --lua-version=5.1 install magick`,这里是`image.nvim`所需，用于在leetcode中显示图片。
 
 7. 其他依赖软件：
 
