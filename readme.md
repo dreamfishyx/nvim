@@ -28,21 +28,22 @@
    export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
    ```
 
-3. 安装`sudo pacman -S ripgrep`，插件`telescope-live-grep-args.nvim`所需用于文件内容查找。
+3. 安装`sudo pacman -S fzf`
+4. 安装`sudo pacman -S ripgrep`，插件`telescope-live-grep-args.nvim`所需用于文件内容查找。
 
-4. `:TSInstall http`用于`rest.nvim`插件编写`.http`
+5. `:TSInstall http`用于`rest.nvim`插件编写`.http`
 
-5. 安装`sudo pacman -S fd`，插件`venv-selector.nvim`所需。
+6. 安装`sudo pacman -S fd`，插件`venv-selector.nvim`所需。
 
-6. `sudo pacman -S imagemagick`,(先要安装lua5.1 `sudo pacman -S lua51`) 然后`yay -S luarocks` 和 `sudo luarocks --lua-version=5.1 install magick`,这里是`image.nvim`所需，用于在leetcode中显示图片。
+7. `sudo pacman -S imagemagick`,(先要安装lua5.1 `sudo pacman -S lua51`) 然后`yay -S luarocks` 和 `sudo luarocks --lua-version=5.1 install magick`,这里是`image.nvim`所需，用于在leetcode中显示图片。
 
-7. 其他依赖软件：
+8. 其他依赖软件：
 
    1. `npm`和`nodejs` 
 
    2. `lazygit`
 
-8. 此外`lazy.nvim`一些自带的插件按需启用：
+9. 此外`lazy.nvim`一些自带的插件按需启用：
 
    ```tex
    Enabled Plugins:
